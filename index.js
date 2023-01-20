@@ -6,6 +6,8 @@ const app = express()
 
 app.use(cors())
 app.use(express.json())
+app.use(express.static('build'))
+
 
 let skipper = (req, res) => req.method !== 'POST'
 let unSkipper = (req, res) => req.method === 'POST'
